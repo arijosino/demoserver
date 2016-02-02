@@ -36,11 +36,10 @@ public class RouteController {
 		try {
 			userid = new ObjectMapper().readValue(dataBody.get("userid").toString(), ObjectId.class);
 			System.out.println(userid.toString());
-			return routeRepository.findByUserid(userid);
 		} catch (IOException e) {
 			e.printStackTrace();
-			return routeRepository.findByUserid(userid);
 		}
+		return routeRepository.findByUserid(userid);
     }
     
     @RequestMapping(value = "/route", method = RequestMethod.DELETE)
@@ -71,11 +70,10 @@ public class RouteController {
 			
 			Route newRoute = new Route(dataBody.get("routename").getAsString(), dataBody.get("startAddress").getAsString(), dataBody.get("endAddress").getAsString(), dataBody.get("encodedPolyline").getAsString(), userid);
 			routeRepository.save(newRoute);
-			return routeRepository.findByUserid(userid);
 		} catch (IOException e) {
 			e.printStackTrace();
-			return routeRepository.findByUserid(userid);
 		}
+    	return routeRepository.findByUserid(userid);
     	
     }
 }

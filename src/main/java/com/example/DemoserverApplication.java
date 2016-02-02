@@ -17,7 +17,7 @@ public class DemoserverApplication implements CommandLineRunner {
 	private UserRepository userRepository;
 	
 	@Autowired
-	RouteRepository routeRepository;
+	private RouteRepository routeRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoserverApplication.class, args);
