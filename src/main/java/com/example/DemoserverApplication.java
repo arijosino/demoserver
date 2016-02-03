@@ -29,7 +29,7 @@ public class DemoserverApplication implements CommandLineRunner {
 		User testuser = new User("abc","202cb962ac59075b964b07152d234b70","");
 		userRepository.save(testuser);//abc 123
 		
-//		routeRepository.deleteAll();
+		routeRepository.deleteAll();
 //		Route testroute = new Route("testroute","fortaleza","papicu","polyline",testuser.getUserid());
 //		routeRepository.save(testroute);
 //		Route testroute2 = new Route("testroute2","fortaleza","papicu","polyline",testuser.getUserid());
